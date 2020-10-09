@@ -14,7 +14,7 @@ The function `execute_shell_simple` takes up to 4 arguments:
 - **action** (optional)  
   What to do with the file, as per `lpOperation` [in MSDN](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecutew#parameters).  
   If omitted, defaults to `"open"`.
-- **showCmd** (optional)
+- **showCmd** (optional)  
   One or other magic number (such as `6` for `SW_MINIMIZE`) from the same MSDN page.  
   If omitted, defaults to `5` (`SW_SHOW`).
 
