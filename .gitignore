@@ -1,0 +1,16 @@
+.vs/
+*/#backups/*
+*/Configs/*/*
+*/extensions/*/*.cpp
+*/extensions/*/*.dll
+*/Debug/
+*/Release/
+Debug/
+Release/
+export/*.gmez
+export/*.yymp
+export/*.yymps
+export/*.png
+export/*.gmz
+*.sdf
+help.rtf
