@@ -41,7 +41,7 @@ Create an internet shortcut and open it in default browser:
 ```gml
 var _url = "https://yoyogames.com";
 var _path = game_save_id + "/shortcut.url";
-var _txt = file_text_open_write(path);
+var _txt = file_text_open_write(_path);
 // note: use '' instead of @'' in GMS1
 file_text_write_string(_txt, @'[{000214A0-0000-0000-C000-000000000046}]
 Prop3=19,11
