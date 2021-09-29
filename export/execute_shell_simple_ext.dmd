@@ -1,0 +1,7 @@
+```set template default.html```
+```set title execute_shell_simple_ext cheat sheet```
+```set autoapi ext```
+```set intro
+This is a "cheat sheet" for "execute_shell_simple_ext" extension by YellowAfterlife.
+The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemaker-execute_shell_simple_ext).
+```

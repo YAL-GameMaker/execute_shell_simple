@@ -1,0 +1,8 @@
+execute_shell_simple_ext-for-GMS1/*
+
+execute_shell_simple_ext-for-GMS2/*
+!execute_shell_simple_ext-for-GMS2/assetpackage.yy
+
+execute_shell_simple_ext-for-GMS2.3+/*
+!execute_shell_simple_ext-for-GMS2.3+/execute_shell_simple_ext_23.yyp
+!execute_shell_simple_ext-for-GMS2.3+/metadata.json
