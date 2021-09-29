@@ -1,22 +1,56 @@
-# execute_shell_simple_ext
+# execute_shell_simple
+**Quick links:** [itch.io page](https://yellowafterlife.itch.io/gamemaker-execute-shell-simple)
 
-This is a "template" project that I start my GameMaker DLLs from (using [copyre](https://github.com/YAL-Haxe/copyre))!
+This single-function extension allows to call [ShellExecute](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecutew) from GameMaker: Studio and GameMaker Studio 2 games.
 
-This branch produces much smaller (3KB base size!) DLLs at cost of sacrificing access to the standard library.
+The function `execute_shell_simple` takes up to 4 arguments:
 
-## Installing
+- **path** (required)  
+  The absolute path to whatever you are trying to run - an executable, a text file, a `.url`, etc.  
+  If you are not sure how to get the true path to your file, have the game copy it to save directory (`game_save_id`).
+- **args** (optional)  
+  Command-line arguments to pass. Non-executables will generally ignore these.  
+  If omitted, defaults to `""`.
+- **action** (optional)  
+  What to do with the file, as per `lpOperation` [in MSDN](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shellexecutew#parameters).  
+  If omitted, defaults to `"open"`.
+- **showCmd** (optional)  
+  One or other magic number (such as `6` for `SW_MINIMIZE`) from the same MSDN page.  
+  If omitted, defaults to `5` (`SW_SHOW`).
 
-<!--
-- **GameMaker 8.1 and older:**  
-  Add the DLL as an included file.  
-  Add the scripts using menu:Scripts➜Import Scripts
--->
-- **GameMaker: Studio:**  
-  Import the GMEZ by right-clicking Extensions folder in resource tree and picking "Import extension"
-- **GameMaker Studio 2**
-  Import the YYMP by drag and dropping it onto your workspace or picking menu:Tools➜Import Local Package
+## Examples
 
-## Meta
+Create a text file and open it in default editor:
+```js
+var _path = game_save_id + "/hi.txt";
+var _txt = file_text_open_write(_path);
+file_text_write_string(_txt, "Hi! " + date_datetime_string(date_current_datetime()));
+file_text_close(_txt);
+execute_shell_simple(_path);
+```
+Create a text file and open it in Notepad:
+```js
+var _path = game_save_id + "/hi.txt";
+var _txt = file_text_open_write(_path);
+file_text_write_string(_txt, "Hi! " + date_datetime_string(date_current_datetime()));
+file_text_close(_txt);
+var _windir = environment_get_variable("WINDIR");
+execute_shell_simple(_windir + "/Notepad.exe", _path);
+```
+Create an internet shortcut and open it in default browser:
+```gml
+var _url = "https://yoyogames.com";
+var _path = game_save_id + "/shortcut.url";
+var _txt = file_text_open_write(_path);
+// note: use '' instead of @'' in GMS1
+file_text_write_string(_txt, @'[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+IDList=
+URL=' + _url);
+file_text_close(_txt);
+execute_shell_simple(_path);
+```
 
-**Author:** [YellowAfterlife](https://github.com/YellowAfterlife)  
-**License:** ?
+---
+For more advanced uses, consider [Execute Shell](https://marketplace.yoyogames.com/assets/575/execute-shell) or [Evaluate Shell](https://marketplace.yoyogames.com/assets/8457/evaluate-shell) by Samuel Venable.
