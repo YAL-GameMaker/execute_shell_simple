@@ -38,7 +38,7 @@
             "final": "",
             "functions": [
                 {
-                    "id": "69796422-3b35-e06b-9fb5-3480b2bdff24",
+                    "id": "4b5b4600-2a24-f149-604a-f84c7c60ff26",
                     "modelName": "GMExtensionFunction",
                     "mvc": "1.0",
                     "argCount": 4,
@@ -46,13 +46,28 @@
                         1,
                         1,
                         1,
-                        2
+                        1
                     ],
-                    "externalName": "execute_shell_simple_raw",
+                    "externalName": "execute_shell_simple_raw_1",
                     "help": "",
                     "hidden": true,
                     "kind": 11,
-                    "name": "execute_shell_simple_raw",
+                    "name": "execute_shell_simple_raw_1",
+                    "returnType": 2
+                },
+                {
+                    "id": "ba61028e-bd30-8fcb-e3fe-65659875c61f",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 1,
+                    "args": [
+                        2
+                    ],
+                    "externalName": "execute_shell_simple_raw_2",
+                    "help": "",
+                    "hidden": true,
+                    "kind": 11,
+                    "name": "execute_shell_simple_raw_2",
                     "returnType": 2
                 }
             ],
@@ -87,7 +102,7 @@
                         
                     ],
                     "externalName": "execute_shell_simple",
-                    "help": "execute_shell_simple(path, args = \"\", action = \"open\", showCmd = 5\/*SW_OPEN*\/)",
+                    "help": "execute_shell_simple(path, args = \"\", action = \"open\", showCmd = 5\/*SW_SHOW*\/, ?workingDirectory)",
                     "hidden": false,
                     "kind": 2,
                     "name": "execute_shell_simple",

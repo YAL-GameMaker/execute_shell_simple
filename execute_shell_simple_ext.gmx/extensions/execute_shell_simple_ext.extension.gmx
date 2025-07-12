@@ -48,8 +48,8 @@
       <ProxyFiles/>
       <functions>
         <function>
-          <name>execute_shell_simple_raw</name>
-          <externalName>execute_shell_simple_raw</externalName>
+          <name>execute_shell_simple_raw_1</name>
+          <externalName>execute_shell_simple_raw_1</externalName>
           <kind>11</kind>
           <help></help>
           <returnType>2</returnType>
@@ -58,6 +58,17 @@
             <arg>1</arg>
             <arg>1</arg>
             <arg>1</arg>
+            <arg>1</arg>
+          </args>
+        </function>
+        <function>
+          <name>execute_shell_simple_raw_2</name>
+          <externalName>execute_shell_simple_raw_2</externalName>
+          <kind>11</kind>
+          <help></help>
+          <returnType>2</returnType>
+          <argCount>1</argCount>
+          <args>
             <arg>2</arg>
           </args>
         </function>
@@ -82,7 +93,7 @@
           <name>execute_shell_simple</name>
           <externalName>execute_shell_simple</externalName>
           <kind>2</kind>
-          <help>execute_shell_simple(path, args = "", action = "open", showCmd = 5/*SW_OPEN*/)</help>
+          <help>execute_shell_simple(path, args = "", action = "open", showCmd = 5/*SW_SHOW*/, ?workingDirectory)</help>
           <returnType>2</returnType>
           <argCount>-1</argCount>
           <args/>

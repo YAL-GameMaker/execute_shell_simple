@@ -20,7 +20,7 @@
 #define dllx extern "C"
 #endif
 
-#define _trace // requires user32.lib;Kernel32.lib
+//#define _trace // requires user32.lib;Kernel32.lib
 
 #ifdef _trace
 #ifdef _WINDOWS

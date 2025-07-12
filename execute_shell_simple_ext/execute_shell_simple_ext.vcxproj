@@ -204,9 +204,6 @@
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="execute_shell_simple_ext.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="postBuild.bat" />
     <None Include="preBuild.bat" />
   </ItemGroup>

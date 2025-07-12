@@ -43,11 +43,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="execute_shell_simple_ext.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="postBuild.bat">
       <Filter>Build scripts</Filter>
     </None>
