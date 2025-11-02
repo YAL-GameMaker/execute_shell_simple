@@ -17,6 +17,9 @@ The function `execute_shell_simple` takes up to 4 arguments:
 - **showCmd** (optional)  
   One or other magic number (such as `6` for `SW_MINIMIZE`) from the same MSDN page.  
   If omitted, defaults to `5` (`SW_SHOW`).
+- **workingDirectory** (optional)
+  A full path to the working directory for the new process.
+  If omitted, uses the game's current working directory.
 
 ## Examples
 
@@ -54,3 +57,8 @@ execute_shell_simple(_path);
 
 ---
 For more advanced uses, consider [Execute Shell](https://marketplace.yoyogames.com/assets/575/execute-shell) or [Evaluate Shell](https://marketplace.yoyogames.com/assets/8457/evaluate-shell) by Samuel Venable.
+
+## Meta
+
+**Author:** [YellowAfterlife](https://github.com/YellowAfterlife)  
+**License:** MIT
